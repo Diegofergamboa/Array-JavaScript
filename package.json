@@ -1,0 +1,22 @@
+{
+  "name": "array-javascript",
+  "version": "1.0.0",
+  "description": "Notes of the course of array manipulation with JavaScript. Platzi and Mozilla Developer documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegofergamboa/Array-JavaScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diegofergamboa/Array-JavaScript/issues"
+  },
+  "homepage": "https://github.com/Diegofergamboa/Array-JavaScript#readme",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
