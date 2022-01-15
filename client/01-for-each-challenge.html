@@ -13,27 +13,46 @@
         const tasks = [{
             'name' : 'Barrer' ,
             'content' : 'tomar la escoba y barrer' ,
-            'complete' : true
+            'state' : true
         } ,
         {
             'name' : 'Cocinar' ,
             'content' : 'Cocinar algo para almorzar' ,
-            'complete' : false
+            'state' : false
         } ,
         {
             'name' : 'Dibujar' ,
             'content' : 'Con lapiz y papel barrer' ,
+            'state' : true ,
         } ,
         {
             'name' : 'Lavar Platos' ,
             'content' : 'Con agua y jabón lavar los platos' ,
+            'state' : false ,
         } ,
         {
             'name' : 'Estudiar' ,
             'content' : 'Estudiar fundamentos de manipulación de arrays' ,
+            'state' : true ,
         } ,
     ];
+    const renderTask = document.getElementById('tasks');
     
+    function renderOfTheTask () {
+        tasks.forEach(index => {
+            renderTask.innerHTML = `
+                <li>
+                    <ul>
+                        <p>${tasks[index].name}</p>
+                        <p>${tasks[index].content}</p>
+                        <input type='checkbox' value='Complete'>}
+                        }/>
+                    </ul>
+                </li>
+            `
+        });
+    }
+    addEventListener('DOMContentLoaded', renderOfTheTask());
     </script>
 </body>
 </html>
