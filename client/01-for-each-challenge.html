@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Lista de tareas que se renderizan con un forEach</h1>
-    <div id="task"></div>
+    <div id="Task"></div>
     <script>
         const tasks = [{
             'name' : 'Barrer' ,
-            'content' : 'tomar la escoba y barrer' ,
+            'content' : 'Tomar la escoba y barrer' ,
             'state' : true
         } ,
         {
@@ -36,17 +36,16 @@
             'state' : true ,
         } ,
     ];
-    const renderTask = document.getElementById('tasks');
-    
+    const Task = document.getElementById('Task');
+
     function renderOfTheTask () {
-        tasks.forEach(index => {
-            renderTask.innerHTML = `
+        tasks.forEach(i => {
+            Task.innerHTML += `
                 <li>
                     <ul>
-                        <p>${tasks[index].name}</p>
-                        <p>${tasks[index].content}</p>
-                        <input type='checkbox' value='Complete'>}
-                        }/>
+                        <p>${i.name}</p>
+                        <p>${i.content}</p>
+                        <input type='checkbox' value='Complete'>
                     </ul>
                 </li>
             `
