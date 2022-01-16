@@ -55,12 +55,5 @@ const querySearch = (query) => {
 }
 
 const valueInput = 'Pika'; 
-console.log(`El Pokemón que buscas es 
-${querySearch(valueInput.namePokemon)}`);
-
-
-
-
-
-
+const resultSearch = querySearch(valueInput);
 
