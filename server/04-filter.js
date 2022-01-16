@@ -44,16 +44,23 @@ const Pokemons = [
 //* Función para crear otro array con los Pokemones más poderosos por filter.
 
 const strongerPokemon = Pokemons.filter(character => character.levelPower >= 70);
-// console.log(`Los pokemones más poderoso con un level Power superior a 70 son, ${strongerPokemon}`);
+
+// console.log(strongerPokemon);
+
+console.log(`Los pokemones más poderoso con un level Power superior a 70 son: `);
+
+strongerPokemon.forEach(element => {
+    console.log(element.namePokemon);
+});
 
 //* Para buscar el Pokemón de la búsqueda.
 
 const querySearch = (query) => {
     return Pokemons.filter(pokemon => {
         return pokemon.namePokemon.includes(query);
-    })
-}
+    });
+};
 
 const valueInput = 'Pika'; 
 const resultSearch = querySearch(valueInput);
-
+console.log(`El resultado de la búsqueda es el Pokemón con nombre ${resultSearch[0].namePokemon} y, Power Level de ${resultSearch[0].levelPower}`);
