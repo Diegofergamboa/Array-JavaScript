@@ -1,60 +1,66 @@
-// const words = ['spray', 'limit', 'elite' , 'exuberant'];
 
+//! Implementando filter, para hacer un buscador de Pokemons que sean de una API.
 
-// const newArray = [];
-// for (let index = 0; index < words.length; index++) {
-//     const item = words[index];
-//     if (item.length > 6) {
-//         newArray.push(item); 
-//     }
-// }
+//* Probaré si función con un minuscula o mayúscula sin importar eso
 
-// // console.log('newArray ', newArray)
-// // console.log('words ' , words)
-
-// const arrayFilter = words.filter(item => item.length>6);
-// // console.log(arrayFilter);
-
-const orders = [
+const Pokemons = [
     {
-        'nameClient' : 'Valentina' ,
-        'orderProduct' : 'Shoes' ,
-        'stateOrder' : false ,
+        'id' : 1 ,
+        'namePokemon' : 'Pikachu' ,
+        'levelPower' : 90 ,
     } ,
     {
-        'nameClient' : 'Pedro' ,
-        'orderProduct' : 'SmartWatch' ,
-        'stateOrder' : true ,
+        'id' : 2 ,
+        'namePokemon' : 'Bulbasaur' ,
+        'levelPower' : 15 ,
     } ,
     {
-        'nameClient' : 'Richard' ,
-        'orderProduct' : 'Laptop' ,
-        'stateOrder' : false ,
+        'id' : 3 ,
+        'namePokemon' : 'Charmander' ,
+        'levelPower' : 70 ,
     } ,
     {
-        'nameClient' : 'Christian' ,
-        'orderProduct' : 'WifiModem' ,
-        'stateOrder' : true ,
+        'id' : 4 ,
+        'namePokemon' : 'Charizard' ,
+        'levelPower' : 100 ,
     } ,
     {
-        'nameClient' : 'Kenny' ,
-        'orderProduct' : 'Keyboard' ,
-        'stateOrder' : false ,
+        'id' : 5 ,
+        'namePokemon' : 'Squirtle' ,
+        'levelPower' : 70 ,
     } ,
+    {
+        'id' : 6 ,
+        'namePokemon' : 'Wartortle' ,
+        'levelPower' : 1 ,
+    } ,
+    {
+        'id' : 7 ,
+        'namePokemon' : 'Ivysaur' ,
+        'levelPower' : 77 ,
+    }
 ];
 
+//* Función para crear otro array con los Pokemones más poderosos por filter.
 
-// Todas las ordenes que se encuentren aprobadas en el estado de la orden.
+const strongerPokemon = Pokemons.filter(character => character.levelPower >= 70);
+// console.log(`Los pokemones más poderoso con un level Power superior a 70 son, ${strongerPokemon}`);
 
+//* Para buscar el Pokemón de la búsqueda.
 
-const filterStateOrder = orders.filter(item => item.stateOrder && item.nameClient.length>5)
-// console.table(filterStateOrder);
-
-//! Se pueden crear consultas que sean un poco más avanzadas. Es decir con consultas directas de query.
-
-const search = (query) => {
-    return orders.filter(item => {
-        return item.nameClient.includes(query);
+const querySearch = (query) => {
+    return Pokemons.filter(pokemon => {
+        return pokemon.namePokemon.includes(query);
     })
 }
+
+const valueInput = 'Pika'; 
+console.log(`El Pokemón que buscas es 
+${querySearch(valueInput.namePokemon)}`);
+
+
+
+
+
+
 
