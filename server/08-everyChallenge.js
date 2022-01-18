@@ -1,4 +1,6 @@
+
 // Algoritmo para validar que todos los jugadores del Equipo son mayores de 15 años
+
 const players = [
     {
         'name': 'Cristiano' ,
@@ -34,4 +36,5 @@ const ageRange15 = players.map(player =>  {
     }
     return console.log(player);
 });
+
 console.log('Los jugadores que no tienen más de 18 son ' + ageRange15);
