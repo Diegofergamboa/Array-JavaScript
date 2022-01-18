@@ -4,3 +4,5 @@ const matriz = [
     [7,8,9] ,
 ];
 
+const rtaFlat = matriz.flat();
+console.log(rtaFlat);
