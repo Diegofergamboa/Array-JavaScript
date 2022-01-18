@@ -15,3 +15,8 @@ for (let index = 0 ; index < numbers.length ; index ++ ) {
 
 console.log(rta);
 
+const rta2 = numbers.every(item => item < 11);
+console.log(rta2);
+
+
+
