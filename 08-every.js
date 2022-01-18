@@ -6,5 +6,11 @@ const numbers = [1,2,3,4,5,6,7,8,9,10];
 let rta = true ;
 
 for (let index = 0 ; index < numbers.length ; index ++ ) {
-    const element = element[index];
+    const element = numbers[index];
+    if (element >= 10) {
+        rta = false;
+        break;
+    }
 }
+
+console.log(rta);
