@@ -16,7 +16,11 @@ const rta2 = numbers.find(num => num == 30);
 console.log(rta2);
 
 // Retornar valores.
+// Cuando no encuentra un elemento devuelve undefined.
 
 //!Tambien se puede encontrar con finINdex.
 
-//* Indica la posición del elemento en específico.
+//* Indica la posición del elemento en específico. del index. Si no lo encuentra retorna un -1.
+
+
+
